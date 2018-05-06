@@ -31,6 +31,17 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml
 
+# Camera
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
+    $(COMMON_PATH)/configs/camera/hi553_cowell_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_cowell_chromatix.xml \
+    $(COMMON_PATH)/configs/camera/hi553_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_lgit_chromatix.xml \
+	$(COMMON_PATH)/configs/camera/imx258_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_imtech_chromatix.xml \
+    $(COMMON_PATH)/configs/camera/imx258_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_lgit_chromatix.xml \
+	$(COMMON_PATH)/configs/camera/imx258_mono_imtech_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_imtech_chromatix.xml \
+	$(COMMON_PATH)/configs/camera/imx258_mono_lgit_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_mono_lgit_chromatix.xml \
+	$(COMMON_PATH)/configs/camera/s5k3m3_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_chromatix.xml
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
