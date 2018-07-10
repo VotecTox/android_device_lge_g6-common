@@ -33,6 +33,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
+# HDR
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_tm_config.xml
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.lucye
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
@@ -40,3 +48,10 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_lucye.conf:system/etc/sensors/sensor_def_common.conf
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.h870_sys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.lights=h870_sys
